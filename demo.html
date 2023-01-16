@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .title {
+            text-align: center;
+            color: rgb(0, 164, 227);
+            font-weight: bold;
+        }
+
+        .calendar {
+            background-image: url(https://cdn.discordapp.com/attachments/1054405459672571928/1059468292496052344/draftTest.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .calendar th {
+            color: white;
+            background-color: rgb(0, 70, 135);
+            width: 6em;
+            height: 2em;
+            font-size: 14px;
+            text-align: center;
+            border: 2px solid rgba(200, 200, 200, 0.3);
+            border-width: 2px;
+        }
+
+        .calendar td {
+            border: 2px solid rgba(200, 200, 200, 0.3);
+            width: 6em;
+            height: 4em;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px;
+            vertical-align: text-top;
+        }
+
+        .calendar a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .calendar td:first-child {
+            color: red;
+        }
+
+        .calendar td:last-child {
+            color: red;
+        }
+
+        .calendar td:hover {
+            color: white;
+            background-color: rgb(0, 164, 227);
+        }
+
+        .postcard {
+            align-items: center;
+            border: 2px solid rgba(200, 200, 200, 0.3);
+            border-radius: 10px;
+        }
+    </style>
+
+    <title>Demo_社群編輯發文計畫</title>
+
+<body>
+    <div class="container py-3">
+        <h5 class="title">公益活動臉書發文計畫<br>【彰化五信 VS 彰化家扶 2023年義賣燈籠】</h5>
+        <h5 class="title">by 張家綾 <img
+                src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt="github"
+                style="width: 22px;"> ChiaLingTW</h5>
+        <hr>
+
+        <!-- postcard 內容 -->
+        <script src="./demoPostCard.js"></script>
+
+        <!-- 主要展示區 -->
+        <div class="row d-flex flex-wrap">
+            <div class="col-12 col-md-6 postcard m-2">
+                <!-- postcard 的展示區 -->
+                <div class="d-flex flex-wrap p-2" id="postTOP">
+                    <div>
+                        <img src="https://cdn.discordapp.com/attachments/1054405459672571928/1059453159141027940/300572748_422613053271139_7328697484970844116_n.jpg"
+                            alt="臉書大頭貼" style="width: 60px;">
+                    </div>
+                    <div class="px-1">
+                        <span>彰化第五信用合作社</span><br>
+                        <span id="postDate">2023年1月2日</span> <img
+                            src="https://cdn-icons-png.flaticon.com/512/8660/8660915.png" alt="earth"
+                            style="width: 16px" ;>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <span id="postText">彰化五信 VS 彰化家扶 2023年義賣燈籠<br>
+                        公益活動臉書發文計畫<br>
+                        by 張家綾 © ChiaLingTW</span>
+                </div>
+                <div class="py-2" style="text-align: center;">
+                    <img src="https://cdn.discordapp.com/attachments/1054405459672571928/1059771590377742346/draftTest02.png"
+                        id="postImg" alt="" style="width: 100%;">
+                </div>
+            </div>
+            <div class="row col-12 col-md-6 calendar">
+                <div class="p-2">
+                    <!-- calendar 預計發文月曆 -->
+                    <h5 style="text-align: center;">1月</h5>
+                    <a href="#postTOP">
+                        <table>
+                            <tr>
+                                <th>日</th>
+                                <th>一</th>
+                                <th>二</th>
+                                <th>三</th>
+                                <th>四</th>
+                                <th>五</th>
+                                <th>六</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td onclick="date0107()">7<br>
+                                    <span>互動</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td onclick="date0111()">11<br>
+                                    <span>義賣活動</span>
+                                </td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td onclick="date0114()">14<br>
+                                    <span>義賣活動</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td onclick="date0119()">19<br>
+                                    <span>義賣活動</span>
+                                </td>
+                                <td>20</td>
+                                <td onclick="date0121()">21<br>
+                                    <span>除夕</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="date0122()">22<br>
+                                    <span>大年初一</span>
+                                </td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td onclick="date0125()">25<br>
+                                    <span>互動</span>
+                                </td>
+                                <td>26</td>
+                                <td onclick="date0127()">27<br>
+                                    <span>義賣活動</span>
+                                </td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>29</td>
+                                <td>30</td>
+                                <td onclick="date0131()">31<br>
+                                    <span>互動</span>
+                                </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                    </a>
+
+                </div>
+                <div class="p-2">
+                    <h5 style="text-align: center;">2月</h5>
+                    <a href="#postTOP">
+                        <table>
+                            <tr>
+                                <th>日</th>
+                                <th>一</th>
+                                <th>二</th>
+                                <th>三</th>
+                                <th>四</th>
+                                <th>五</th>
+                                <th>六</th>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td onclick="date0203()">3<br>
+                                    <span>義賣活動</span>
+                                </td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td onclick="date0205()">5<br>
+                                    <span>義賣感謝</span>
+                                </td>
+                                <td>6 </td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
