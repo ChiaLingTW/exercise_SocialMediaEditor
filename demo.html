@@ -7,114 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/0c8787c5b8.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-
-    <style>
-        .title {
-            text-align: center;
-            color: rgb(0, 164, 227);
-            font-weight: bold;
-        }
-
-        .calendar {
-            background-image: url(https://cdn.discordapp.com/attachments/1054405459672571928/1059468292496052344/draftTest.png);
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .calendar th {
-            color: white;
-            background-color: rgb(0, 70, 135);
-            width: 6em;
-            height: 2em;
-            font-size: 14px;
-            text-align: center;
-            border: 2px solid rgba(200, 200, 200, 0.3);
-            border-width: 2px;
-        }
-
-        .calendar td {
-            border: 2px solid rgba(200, 200, 200, 0.3);
-            width: 6em;
-            height: 4em;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 5px;
-            vertical-align: text-top;
-        }
-
-        .calendar a {
-            color: black;
-            text-decoration: none;
-        }
-
-        .calendar td:first-child {
-            color: red;
-        }
-
-        .calendar td:last-child {
-            color: red;
-        }
-
-        .calendar td:hover {
-            color: white;
-            background-color: rgb(0, 164, 227);
-        }
-
-        .postcard {
-            align-items: center;
-            border: 2px solid rgba(200, 200, 200, 0.3);
-            border-radius: 10px;
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/0c8787c5b8.js" crossorigin="anonymous"></script>
+    <script src="./js/demoTest.js" defer></script>
 
     <title>Demo_社群編輯發文計畫</title>
+</head>
 
 <body>
-    <div class="container py-3">
-        <h5 class="title">公益活動臉書發文計畫<br>【彰化五信 VS 彰化家扶 2023年義賣燈籠】</h5>
-        <h5 class="title">by 張家綾 <img
-                src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt="github"
-                style="width: 22px;"> ChiaLingTW</h5>
-        <hr>
-
-        <!-- postcard 內容 -->
-        <script src="./demoPostCard.js"></script>
-
-        <!-- 主要展示區 -->
+    <header>
+        <h5><i class="fa-brands fa-square-facebook"></i>&nbsp;臉書發文計畫<br>公益活動【彰化五信 VS 彰化家扶 2023年義賣燈籠】</h5>
+        <span>by&nbsp;張家綾&nbsp;<i class="fa-brands fa-github"></i>&nbsp;ChiaLingTW</span>
+    </header>
+    <main class="container">
+        <a href="#calendarClick" class="position-fixed bottom-0 end-0 topClick">回到月曆重新選擇</a>
         <div class="row d-flex flex-wrap">
-            <div class="col-12 col-md-6 postcard m-2">
-                <!-- postcard 的展示區 -->
-                <div class="d-flex flex-wrap p-2" id="postTOP">
-                    <div>
-                        <img src="https://cdn.discordapp.com/attachments/1054405459672571928/1059453159141027940/300572748_422613053271139_7328697484970844116_n.jpg"
-                            alt="臉書大頭貼" style="width: 60px;">
-                    </div>
-                    <div class="px-1">
-                        <span>彰化第五信用合作社</span><br>
-                        <span id="postDate">2023年1月2日</span> <img
-                            src="https://cdn-icons-png.flaticon.com/512/8660/8660915.png" alt="earth"
-                            style="width: 16px" ;>
-                    </div>
-                </div>
-                <div class="p-2">
-                    <span id="postText">彰化五信 VS 彰化家扶 2023年義賣燈籠<br>
-                        公益活動臉書發文計畫<br>
-                        by 張家綾 © ChiaLingTW</span>
-                </div>
-                <div class="py-2" style="text-align: center;">
-                    <img src="https://cdn.discordapp.com/attachments/1054405459672571928/1059771590377742346/draftTest02.png"
-                        id="postImg" alt="" style="width: 100%;">
-                </div>
-            </div>
-            <div class="row col-12 col-md-6 calendar">
-                <div class="p-2">
-                    <!-- calendar 預計發文月曆 -->
-                    <h5 style="text-align: center;">1月</h5>
+            <span id="calendarClick">點擊月曆上有小標題的日期，<br>可查看該日貼文內容～</span>
+            <!-- calendar 預計發文月曆 -->
+            <section class="col-12 col-md-6 calendar">
+                <div class="month">
                     <a href="#postTOP">
                         <table>
+                            <tr>
+                                <th colspan="7">1月</th>
+                            </tr>
                             <tr>
                                 <th>日</th>
                                 <th>一</th>
@@ -189,12 +109,13 @@
                             </tr>
                         </table>
                     </a>
-
                 </div>
-                <div class="p-2">
-                    <h5 style="text-align: center;">2月</h5>
+                <div class="month">
                     <a href="#postTOP">
                         <table>
+                            <tr>
+                                <th colspan="7">2月</th>
+                            </tr>
                             <tr>
                                 <th>日</th>
                                 <th>一</th>
@@ -256,9 +177,33 @@
                         </table>
                     </a>
                 </div>
-            </div>
+            </section>
+            <!-- postcard 的展示區 -->
+            <section class="col-12 col-md-6">
+                <div class="postcard">
+                    <div class="d-flex flex-wrap postTOP" id="postTOP">
+                        <div>
+                            <img src="https://cdn.discordapp.com/attachments/1054405459672571928/1059453159141027940/300572748_422613053271139_7328697484970844116_n.jpg"
+                                alt="大頭貼">
+                        </div>
+                        <div>
+                            <span>彰化第五信用合作社</span><br>
+                            <span id="postDate">2023年1月2日&nbsp;<i class="fa-solid fa-earth-americas"></i></span>
+                        </div>
+                    </div>
+                    <div class="postBOTTOM">
+                        <span id="postText">彰化五信 VS 彰化家扶 2023年義賣燈籠<br>
+                            #公益活動&nbsp;<i class="fa-brands fa-square-facebook"></i>&nbsp;臉書發文計畫<br>
+                            by&nbsp;張家綾&nbsp;<i class="fa-brands fa-github"></i>&nbsp;ChiaLingTW</span>
+                    </div>
+                    <div class="postImg">
+                        <img src="https://cdn.discordapp.com/attachments/1054405459672571928/1077134268498714624/draftTest02.png"
+                            id="postImg" alt="貼文圖片">
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>

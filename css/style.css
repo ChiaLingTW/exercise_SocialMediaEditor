@@ -1,0 +1,128 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    color: white;
+    background-color: rgb(0, 164, 227);
+    text-align: center;
+    padding: 10px;
+}
+
+header h5 {
+    font-weight: bold;
+}
+
+header i {
+    color: rgb(0, 26, 176);
+}
+
+header span {
+    font-size: 15px;
+}
+
+.row>span:first-child {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0px 0px 0px;
+}
+
+.topClick {
+    color: white;
+    background-color: rgb(255, 0, 0);
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.month {
+    padding-bottom: 10px;
+}
+
+.calendar th {
+    width: 6em;
+    height: 2em;
+    color: white;
+    background-color: rgb(0, 70, 135);
+    font-size: 14px;
+    border: 2px solid rgba(200, 200, 200, 0.5);
+    text-align: center;
+}
+
+.calendar td {
+    width: 6em;
+    height: 4em;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid rgba(200, 200, 200, 0.5);
+    vertical-align: text-top;
+}
+
+.calendar a {
+    color: black;
+}
+
+.calendar td:first-child {
+    color: red;
+}
+
+.calendar td:last-child {
+    color: red;
+}
+
+.calendar td:hover {
+    color: white;
+    background-color: rgb(0, 164, 227);
+}
+
+.postcard {
+    border: 2px solid rgba(200, 200, 200, 0.5);
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+
+.postTOP,
+.postBOTTOM {
+    padding: 0px 10px 10px 10px;
+}
+
+.postTOP img {
+    width: 60px;
+}
+
+.postTOP div:nth-child(2) {
+    margin: 0px 10px;
+}
+
+.postImg {
+    text-align: center;
+}
+
+.postImg img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .calendar td {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header h5 {
+        font-size: 14px;
+    }
+
+    header span,
+    .topClick {
+        font-size: 12px;
+    }
+}
