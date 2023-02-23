@@ -37,7 +37,6 @@ header span {
     color: white;
     background-color: orange;
     font-size: 14px;
-    font-weight: bold;
     padding: 10px;
     border-radius: 10px;
     position: absolute;
@@ -47,7 +46,7 @@ header span {
 
 .topClick {
     color: white;
-    background-color: orange;
+    background-color: orangered;
     font-size: 14px;
     padding: 10px;
     border-radius: 10px;
