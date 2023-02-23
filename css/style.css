@@ -33,6 +33,18 @@ header span {
     padding: 10px 0px;
 }
 
+.topClick2 {
+    color: white;
+    background-color: orange;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 .topClick {
     color: white;
     background-color: orange;
@@ -40,6 +52,7 @@ header span {
     padding: 10px;
     border-radius: 10px;
 }
+
 
 .month {
     padding-bottom: 10px;
