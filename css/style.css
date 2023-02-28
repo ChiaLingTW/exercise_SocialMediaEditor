@@ -39,14 +39,14 @@ header span {
     font-size: 14px;
     padding: 10px;
     border-radius: 10px;
-    position: absolute;
-    top: 0px;
+    position: fixed;
+    bottom: 50px;
     right: 0px;
 }
 
 .topClick {
     color: white;
-    background-color: orangered;
+    background-color: rgb(0, 165, 0);
     font-size: 14px;
     padding: 10px;
     border-radius: 10px;
@@ -134,7 +134,8 @@ header span {
     }
 
     header span,
-    .topClick {
+    .topClick,
+    .topClick2 {
         font-size: 12px;
     }
 }
